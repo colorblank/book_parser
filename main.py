@@ -48,3 +48,22 @@ if __name__ == '__main__':
     # 6. 选择某一章解析 | 解析全文 | 解析后30章
 
     # 7. 书籍类目录属性自动更新
+    def update(obj_book):
+        if len(obj_book.contents) == 0:
+            return False
+        elif obj_book.novel_url != '':
+            chapters = get_chapters(obj_book.novel_url)
+            if len(chapters) > len(obj_book.contents):
+                i = len(obj_book.contents) - len(chapters)
+                print("Updating"+ abs(i) +"chapters...")
+                while i < 0:
+                    obj_book.contents.append(chapters[i])
+                    i += 1
+                print("Updating success.")
+                return True
+            else:
+                pass
+        else:
+            return False
+
+    update(new_book)
