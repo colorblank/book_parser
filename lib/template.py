@@ -13,6 +13,13 @@ import time
 #     latest_chapter = []  # 最新章节
 #     novel_url = ''       # 小说链接
 
+# BookSites = {
+#     "文学迷": 'https://www.wenxuemi6.com',
+#     "E小说": 'https://www.zwda.com',
+#     "顶点208": "https://www.208xs.com",
+# }
+
+
 SITE_URL = ''
 # https://www.zwda.com
 search_url = ''

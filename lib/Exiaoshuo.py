@@ -30,13 +30,7 @@ def get_soup(any_url):
 
 
 def search(keyword):
-    book = {
-        "书名":"",
-        "封面URL":"",
-        "简介":"",
-        "作者":"",
-        "小说链接":"",
-    }
+
     res = []
     url = search_url + keyword
     soup = get_soup(url)
@@ -45,6 +39,13 @@ def search(keyword):
     results = soup.find_all("div",class_="result-item result-game-item")
 
     for result in results:
+        book = {
+            "书名": "",
+            "封面URL": "",
+            "简介": "",
+            "作者": "",
+            "小说链接": "",
+        }
         # 2. 筛选书名
         name_tag = result.find("a",class_="result-game-item-title-link")
         book["书名"] = name_tag["title"]
