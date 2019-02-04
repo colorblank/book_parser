@@ -1,3 +1,6 @@
+from lib.Exiaoshuo import search,get_chapters,get_chapter_content
+
+
 class Book:
     name = "未知"     # 书名
     cover_url = ''      # 封面URL
@@ -6,32 +9,6 @@ class Book:
     contents = []        # 目录
     latest_chapter = []  # 最新章节
     novel_url = ''       # 小说链接
-
-def search(keyword):
-    book = {
-        "书名":"",
-        "封面URL":"",
-        "简介":"",
-        "作者":"",
-        "小说链接":"",
-    }
-    res = []
-    return res
-
-def get_chapters(url):
-    chapter = {
-        "章节名":"",
-        "正文":"",
-        "章节链接":"",
-        "时间戳":0,
-    }
-    contents = []
-    return contents
-
-def get_chapter_content(url):
-    paragraph = ""
-    paragraphs = []
-    return paragraphs
 
 
 if __name__ == '__main__':
